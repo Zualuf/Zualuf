@@ -1,8 +1,9 @@
-# Zualuf
+# Zualuf Hub
+## Made with love by lolbad
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Zualuf/Zualuf/refs/heads/main/AutoBuild.lua"))()
 ```
-## Executor MUST SUPPORT
+### Executor MUST SUPPORT
 FILE FUNCTION
 
 LOADSTRING
