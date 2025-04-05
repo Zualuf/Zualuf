@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Zualuf/Zualuf/refs/heads/main/AutoBuild.lua"))()
