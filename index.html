@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zualuf Hub</title>
+    <style>
+                /* If you want the Discord logo */
+        .discord-btn i {
+            margin-right: 8px;
+        }
+        :root {
+            --main-color: #ff4848;
+            --secondary-color: #ff5050;
+            --dark-bg: #0f0f12;
+            --darker-bg: #0a0a0c;
+            --text-color: #ffffff;
+            --accent: #ff4d56;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--main-color);
+            border-radius: 10px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--darker-bg);
+            padding: 15px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--main-color), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--main-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, var(--darker-bg), var(--dark-bg));
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(45deg, var(--main-color), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto 40px;
+            color: #b3b3b3;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 72, 72, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 72, 72, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--main-color);
+            color: var(--main-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 72, 72, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, var(--main-color), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(30, 30, 40, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card h3 {
+            color: var(--main-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: #b3b3b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--darker-bg);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none; /* Add mobile menu toggle in real site */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Zualuf</div>
+            <div class="nav-links">
+                <a href="">Home</a>
+                <a href="https://raw.githubusercontent.com/Zualuf/Zualuf/refs/heads/main/assets/getscript.txt">Get Script</a>
+                <a href="https://discord.gg/rWtJdkjBfJ" class="discord-btn">
+                    <i class="fab fa-discord"></i> Discord
+                </a>
+            
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Zualuf</h1>
+        <p>Zualuf delivers unmatched stability and features for Roblox script hub</p>
+        <a href="https://raw.githubusercontent.com/Zualuf/Zualuf/refs/heads/main/assets/getscript.txt" class="btn btn-primary">Get Script</a>
+        <a href="https://discord.gg/rWtJdkjBfJ" class="btn btn-secondary">Discord</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Why Choose Zualuf</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Blazing Fast</h3>
+                <p>Optimized code for the best performance in-game.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast Updates</h3>
+                <p>Updates to keep you up for the next experience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Easy to Use</h3>
+                <p>Simple UI with script hub and easy to save and load files.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Zualuf Team</p>
+    </footer>
+</body>
+</html>
